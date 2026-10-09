@@ -5,7 +5,7 @@ agent any
 stages {
     stage('Clone Code') {
         steps {
-            echo 'Code cloned successfully'
+            echo 'Code checkout handled by Jenkins'
         }
     }
 
@@ -15,7 +15,7 @@ stages {
         }
     }
 
-    stage('Test Docker Image') {
+    stage('Test Image') {
         steps {
             sh 'sudo docker image inspect gayatri2002/digital-banking-portal'
         }
