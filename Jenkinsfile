@@ -1,5 +1,5 @@
 pipeline {
-agent any
+agent node01
 
 stages {
     stage('Clone Code') {
