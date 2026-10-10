@@ -22,11 +22,9 @@ stages {
 
     stage('Deploy') {
         steps {
-            sh '''
-                sudo docker stop digital-banking-portal || true
-                sudo docker rm digital-banking-portal || true
-                sudo docker run -d --name digital-banking-portal -p 8000:8080 gayatri2002/digital-banking-portal
-            '''
+            sh  'sudo docker stop digital-banking-portal || true'
+            sh  'sudo docker rm digital-banking-portal || true'
+            sh  'sudo docker run -d --name digital-banking-portal -p 8000:8080 gayatri2002/digital-banking-portal'
         }
     }
 
